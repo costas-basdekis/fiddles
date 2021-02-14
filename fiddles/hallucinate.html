@@ -141,9 +141,9 @@ function getHrefSettings() {
 
 function getIsEmbedded() {
   try {
-    return true;
+    return !top.location.href;
   } catch (e) {
-    return false;
+    return true;
   }
 }
 
