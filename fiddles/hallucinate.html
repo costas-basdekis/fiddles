@@ -131,7 +131,7 @@ function getHrefSettings() {
     return {};
   }
   const search = top.location.search;
-  const params = [...new URLSearchParams(search).entries];
+  const params = [...new URLSearchParams(search).entries()];
   const settingsParams = params.filter(([key]) => DEFAULT_SETTINGS.hasOwnProperty(key));
   const settings = Object.fromEntries(settingsParams);
   console.log('Got settings:', settings);
